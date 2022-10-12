@@ -1,11 +1,11 @@
 require 'socket'
+socket = TCPServer.new(4040)
 
 loop do
-  socket = TCPServer.new(4040)
   client = socket.accept
   first_line = client.gets
 
-  if first_line.length > 0
+  if !first_line.nil? && first_line.length > 0
     begin
       if ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'].include?(first_line.split[0])
         verb = first_line.split[0]
@@ -24,7 +24,7 @@ loop do
     ensure
       first_line.clear
       client.close
-      socket.close
     end
   end
 end
+socket.close
