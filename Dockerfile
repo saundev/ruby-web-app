@@ -1,15 +1,24 @@
-FROM ruby:3.0
+FROM ruby:3.0.0-alpine
 
-# throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
+RUN apk add --update --virtual \
+  runtime-deps \
+  readline \
+  build-base \
+  yarn \
+  file \
+  git \
+  && rm -rf /var/cache/apk/*
 
-WORKDIR /usr/src/app
+RUN mkdir /usr/src/app
+ADD . /usr/src/app/
+WORKDIR /usr/src/app/
+COPY /src/ .
+RUN chmod 0755 /usr/src/app/server.rb
 
-COPY Gemfile Gemfile.lock ./
+ENV BUNDLE_PATH /gems
+RUN yarn install
 RUN bundle install
 
-COPY . /src
-WORKDIR /src 
-
+ENTRYPOINT [ "ruby" ]
+CMD ["/usr/src/app/server.rb"]
 EXPOSE 4040
-CMD ["./src/server.rb"]
