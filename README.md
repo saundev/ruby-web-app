@@ -1,7 +1,9 @@
 # ruby-web-app
 
 To run and test the Ruby server script on your local machine install Ruby v3.0.0 and run:
+
 `cd $PWD/src/`
+
 `ruby server.rb`
 
 To run Ruby container locally run the following commands from the root of the repository, replace Saundev with your own private Docker repo.
