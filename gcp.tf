@@ -1,8 +1,5 @@
 module "kubernetes-cluster" {
-  source  = "./modules/gke"
-  version = "23.2.0"
-  project = var.project_id
-  region  = var.region
+  source = "./modules/gke"
 }
 
 # data "google_container_registry_repository" "web-app" {

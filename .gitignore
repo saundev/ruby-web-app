@@ -15,6 +15,8 @@ crash.log
 terraform.tfvars
 terraform.tfstate.backup
 variables.auto.tfvars
+.terraform.lock.hcl
+
 # example.tfvars # Example will be used for documentation perposes
 
 # Ignore override files as they are usually used to override resources locally and so
