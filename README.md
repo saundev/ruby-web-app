@@ -2,7 +2,7 @@
 
 To run and test the Ruby server script on your local machine install Ruby v3.0.0 and run:
 
-`cd $PWD/src/`
+`cd $PWD/ruby-web-app/src`
 
 `ruby server.rb`
 
