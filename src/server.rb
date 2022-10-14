@@ -10,8 +10,8 @@ loop do
       if ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'].include?(first_line.split[0])
         verb = first_line.split[0]
         path = first_line.split[1]
-        puts verb
-        puts path
+        ### Uncomment to enable debugging ###
+        #puts verb + path
       end
     rescue =>
       verb.clear
