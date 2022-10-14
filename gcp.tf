@@ -1,5 +1,5 @@
 module "kubernetes-cluster" {
-  source  = "./modules/gke-cluster"
+  source  = "./modules/gke"
   version = "23.2.0"
   project = var.project_id
   region  = var.region
