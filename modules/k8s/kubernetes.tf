@@ -11,7 +11,7 @@ data "terraform_remote_state" "gke" {
 data "google_client_config" "default" {}
 
 data "google_container_cluster" "ruby_cluster" {
-  name     = "${var.project_id}-gke"
+  name     = "${var.project_id}-gke-ruby"
   location = var.region
 }
 

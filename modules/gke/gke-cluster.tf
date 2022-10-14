@@ -1,6 +1,6 @@
 # GKE cluster - Node pool of 1 required to create base cluster.
 resource "google_container_cluster" "primary" {
-  name                     = "${var.project_id}-gke"
+  name                     = "${var.project_id}-gke-ruby"
   location                 = var.region
   remove_default_node_pool = true
   initial_node_count       = 1
