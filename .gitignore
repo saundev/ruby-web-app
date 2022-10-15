@@ -28,7 +28,7 @@ override.tf.json
 
 ### Google Cloud Service Account for local and pipeline deployments, root directory
 automation-sa.json
-
+key.json
 # Include override files you do wish to add to version control using negated pattern
 #
 # !example_override.tf
