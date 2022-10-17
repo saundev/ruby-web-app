@@ -9,12 +9,12 @@ variable "project_id" {
   nullable    = false
 }
 
-variable "env" {
-  description = "Environment assigned to resrouces."
-  type        = string
-  validation {
-    condition     = length(var.env) > 0 && contains(["dev", "prod"], var.env)
-    error_message = "Environment must be either dev or prod."
-  }
-  nullable = false
-}
+# variable "env" {
+#   description = "Environment assigned to resrouces."
+#   type        = string
+#   validation {
+#     condition     = length(var.env) > 0 && contains(["dev", "prod"], var.env)
+#     error_message = "Environment must be either dev or prod."
+#   }
+#   nullable = false
+# }
