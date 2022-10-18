@@ -12,6 +12,7 @@ Run the following TF commands:
 `terraform apply -auto-approve`
 
 *Once finished with resources:*
+
 `terraform destroy -auto-approve`
 
 ## Ruby Instructions
