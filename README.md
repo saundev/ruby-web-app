@@ -11,6 +11,8 @@ Run the following TF commands:
 
 `terraform apply -auto-approve`
 
+## Ruby Instructions
+
 To run and test the Ruby server script on your local machine install Ruby v3.0.0 and run:
 
 `cd $PWD/ruby-web-app/src`
@@ -29,7 +31,7 @@ To run Ruby container locally run the following commands from the root of the re
 
 `docker pull izaun/saundev:saundev-ruby`
 
-### Set docker target repo add  comainter image to Google Cloud Artifact: ###
+### Set docker target repo add  comainter image to Google Cloud Artifact:
 
 `gcloud auth configure-docker \`
 `    LOCATION-docker.pkg.dev`
@@ -48,7 +50,7 @@ To run Ruby container locally run the following commands from the root of the re
 `cat key.json | docker login -u _json_key_base64 --password-stdin \`
 `https://LOCATION-docker.pkg.dev`
 
-### Now service account is autenticated for 60 minutes, tag the docker image and push to GCR. ###
+### Now service account is autenticated for 60 minutes, tag the docker image and push to GCR.
 
 `docker tag IMAGE_ID LOCATION-docker.pkg.dev/PROJECT_ID/REPO_NAME/CONTAINER_NAME`
 
@@ -64,7 +66,7 @@ To run Ruby container locally run the following commands from the root of the re
 
 *Default container option is Google Cloud Run, use Terraform Commands to run this, GKE and K8s Modules are optional.*
 
-### [Optional] Configure kubectl for GKE cluster post install: ###
+### [Optional] Configure kubectl for GKE cluster post install:
 
 `gcloud container clusters get-credentials PROJECT_ID --region LOCATION`
 
@@ -74,13 +76,13 @@ To run Ruby container locally run the following commands from the root of the re
 
 `kubectl proxy`
 
-### [Optional] Open the following link on web browser ###
+### [Optional] Open the following link on web browser:
 `http://127.0.0.1:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/`
 
-### [Optional] Open a new terminal and run the following cmd ###
+### [Optional] Open a new terminal and run the following cmd:
 `kubectl apply -f https://raw.githubusercontent.com/hashicorp/learn-terraform-provision-gke-cluster/main/kubernetes-dashboard-admin.rbac.yaml`
 
-### [Optional] Now that the new role has been established run this cmd to generate auth token ###
+### [Optional] Now that the new role has been established run this cmd to generate auth token:
 `kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep service-controller-token | awk '{print $1}')`
 
 `gcloud container clusters describe $(terraform output -raw kubernetes_cluster_name) --region $(terraform output -raw region) --format='default(locations)'`
