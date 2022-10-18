@@ -49,8 +49,10 @@ gcloud auth print-access-token \
 
 `base64 -i service-account.json -o key.json`
 
-`cat key.json | docker login -u _json_key_base64 --password-stdin \`
-`https://LOCATION-docker.pkg.dev`
+```
+cat key.json | docker login -u _json_key_base64 --password-stdin \
+  https://LOCATION-docker.pkg.dev
+```
 
 ### Now service account is autenticated for 60 minutes, tag the docker image and push to GCR.
 
