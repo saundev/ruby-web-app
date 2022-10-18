@@ -1,4 +1,15 @@
-# ruby-web-app
+# HTTP Server Container and Ruby App
+*Ruby app runs on 4040, ongoing work required to enable SSL / HTTPs requests.  In place of this a HTTP/S NGINX instance has been used.  Ruby code in '/src'*
+
+## Terraform Instructions
+
+Run the following TF commands:
+
+`terraform init`
+
+`terraform plan`
+
+`terraform apply -auto-approve`
 
 To run and test the Ruby server script on your local machine install Ruby v3.0.0 and run:
 
@@ -17,16 +28,6 @@ To run Ruby container locally run the following commands from the root of the re
 `docker push izaun/saundev:saundev-ruby`
 
 `docker pull izaun/saundev:saundev-ruby`
-
-### Terraform Instructions ###
-
-Run the following TF commands:
-
-`terraform init`
-
-`terraform plan`
-
-`terraform apply -auto-approve`
 
 ### Set docker target repo add  comainter image to Google Cloud Artifact: ###
 
