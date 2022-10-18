@@ -8,15 +8,23 @@
 
 Run the following TF commands:
 
-`terraform init`
+```
+terraform init
+```
 
-`terraform plan`
+```
+terraform plan
+```
 
-`terraform apply -auto-approve`
+```
+terraform apply -auto-approve
+```
 
 *Once finished with resources:*
 
-`terraform destroy -auto-approve`
+```
+terraform destroy -auto-approve
+```
 
 ## Ruby Instructions
 
