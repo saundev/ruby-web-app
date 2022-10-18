@@ -19,17 +19,17 @@ To run and test the Ruby server script on your local machine install Ruby v3.0.0
 
 `ruby server.rb`
 
-To run Ruby container locally run the following commands from the root of the repository, replace Saundev with your own private Docker repo.
+To run Ruby container locally run the following commands from the root of the repository, replace account with your own private Docker repo.
 
 `docker build -t ruby-web-app .`
 
 `docker run -p 8000:4040 --name ruby-instance ruby-web-app`
 
-`docker tag ruby-web-app:latest izaun/saundev:saundev-ruby`
+`docker tag ruby-web-app:latest user/account:container-ruby`
 
-`docker push izaun/saundev:saundev-ruby`
+`docker push user/account:container-ruby`
 
-`docker pull izaun/saundev:saundev-ruby`
+`docker pull user/account:container-ruby`
 
 ### Set docker target repo add  comainter image to Google Cloud Artifact:
 
