@@ -61,7 +61,9 @@ Run the following TF commands:
 
 `gcloud container clusters get-credentials $(terraform output -raw kubernetes_cluster_name) --region $(terraform output -raw region)`
 
-### Configure kubectl for GKE cluster post install: ###
+* Default container option is Google Cloud Run, use Terraform Commands to run this, GKE and K8s Modules are optional *
+
+### [Optional] Configure kubectl for GKE cluster post install: ###
 
 `gcloud container clusters get-credentials PROJECT_ID --region LOCATION`
 
@@ -71,13 +73,13 @@ Run the following TF commands:
 
 `kubectl proxy`
 
-### Open the following link on web browser ###
+### [Optional] Open the following link on web browser ###
 `http://127.0.0.1:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/`
 
-### Open a new terminal and run the following cmd ###
+### [Optional] Open a new terminal and run the following cmd ###
 `kubectl apply -f https://raw.githubusercontent.com/hashicorp/learn-terraform-provision-gke-cluster/main/kubernetes-dashboard-admin.rbac.yaml`
 
-### Now that the new role has been established run this cmd to generate auth token ###
+### [Optional] Now that the new role has been established run this cmd to generate auth token ###
 `kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep service-controller-token | awk '{print $1}')`
 
 `gcloud container clusters describe $(terraform output -raw kubernetes_cluster_name) --region $(terraform output -raw region) --format='default(locations)'`
