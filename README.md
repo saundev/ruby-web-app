@@ -40,10 +40,12 @@ To run Ruby container locally run the following commands from the root of the re
 
 `gcloud auth configure-docker LOCATION-docker.pkg.dev`
 
-`gcloud auth print-access-token \`
-`  --impersonate-service-account  service-account@PROJECT_ID.iam.gserviceaccount.com | docker login \`
-`  -u oauth2accesstoken \`
-`  --password-stdin https://LOCATION-docker.pkg.dev`
+```
+gcloud auth print-access-token \
+  --impersonate-service-account  service-account@PROJECT_ID.iam.gserviceaccount.com | docker login \
+  -u oauth2accesstoken \
+  --password-stdin https://LOCATION-docker.pkg.dev
+```
 
 `base64 -i service-account.json -o key.json`
 
