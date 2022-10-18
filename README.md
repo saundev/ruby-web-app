@@ -11,6 +11,9 @@ Run the following TF commands:
 
 `terraform apply -auto-approve`
 
+*Once finished with resources:*
+`terraform destroy -auto-approve`
+
 ## Ruby Instructions
 
 To run and test the Ruby server script on your local machine install Ruby v3.0.0 and run:
