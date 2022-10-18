@@ -25,11 +25,11 @@ To run Ruby container locally run the following commands from the root of the re
 
 `docker run -p 8000:4040 --name ruby-instance ruby-web-app`
 
-`docker tag ruby-web-app:latest user/account:container-ruby`
+`docker tag ruby-web-app:latest user/account:ruby-img`
 
-`docker push user/account:container-ruby`
+`docker push user/account:ruby-img`
 
-`docker pull user/account:container-ruby`
+`docker pull user/account:ruby-img`
 
 ### Set docker target repo add  comainter image to Google Cloud Artifact:
 
