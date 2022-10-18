@@ -30,9 +30,13 @@ terraform destroy -auto-approve
 
 To run and test the Ruby server script on your local machine install Ruby v3.0.0 and run:
 
-`cd $PWD/ruby-web-app/src`
+```
+cd $PWD/ruby-web-app/src
+```
 
-`ruby server.rb`
+```
+ruby server.rb
+```
 
 To run Ruby container locally run the following commands from the root of the repository, replace account with your own private Docker repo.
 
