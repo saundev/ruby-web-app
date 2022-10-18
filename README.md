@@ -63,7 +63,9 @@ docker pull user/account:ruby-img
 ## Container Security Scans
 
 ![Trivy Image Scan on Local Docker](/assets/trivy-security-scan-results.jpg)
+
 *For `prod` / `live` environments ensure CI step fails on items at high level or greater.*
+
 ![Google Aritfact Container Image Scan](/assets/gcp-artifact-reg-scan.jpg)
 
 ### Set docker target repo add  comainter image to Google Cloud Artifact:
