@@ -60,11 +60,15 @@ cat key.json | docker login -u _json_key_base64 --password-stdin \
 
 `docker push LOCATION-docker.pkg.dev/PROJECT_ID/REPO_NAME/CONTAINER_NAME`
 
-`gcloud artifacts docker images list \`
-`LOCATION-docker.pkg.dev/PROJECT_ID/REPO_NAME/CONTAINER_NAME --include-tags`
+```
+gcloud artifacts docker images list \
+  LOCATION-docker.pkg.dev/PROJECT_ID/REPO_NAME/CONTAINER_NAME --include-tags
+```
 
-`gcloud container clusters get-credentials $(terraform output -raw kubernetes_cluster_name) \`
-`--region $(terraform output -raw region)`
+```
+gcloud container clusters get-credentials $(terraform output -raw kubernetes_cluster_name) \
+  --region $(terraform output -raw region)
+```
 
 `gcloud container clusters get-credentials $(terraform output -raw kubernetes_cluster_name) --region $(terraform output -raw region)`
 
