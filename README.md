@@ -1,5 +1,5 @@
 # HTTP Server Container and Ruby App
-*Ruby app runs on 4040, ongoing work required to enable SSL / HTTPs requests.  In place of this a HTTP/S NGINX instance has been used.  Ruby code in '/src'*
+*Ruby app runs on 4040, ongoing work required to enable SSL / HTTPs requests which is required to run in containers with HTTPS enabled.  In place of this a HTTP/S NGINX instance has been used.  Ruby code in '/src'*
 
 ## Terraform Instructions
 
