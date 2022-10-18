@@ -61,7 +61,7 @@ Run the following TF commands:
 
 `gcloud container clusters get-credentials $(terraform output -raw kubernetes_cluster_name) --region $(terraform output -raw region)`
 
-* * Default container option is Google Cloud Run, use Terraform Commands to run this, GKE and K8s Modules are optional. * *
+*Default container option is Google Cloud Run, use Terraform Commands to run this, GKE and K8s Modules are optional.*
 
 ### [Optional] Configure kubectl for GKE cluster post install: ###
 
