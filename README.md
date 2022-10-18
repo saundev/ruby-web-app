@@ -1,5 +1,5 @@
 # HTTP Server Container and Ruby App
-*Ruby app runs on 4040, ongoing work required to enable SSL / HTTPs requests which is required to run in containers with HTTPS enabled.  In place of this a HTTP/S NGINX instance has been used.  Ruby code in `/src` folder. `TODO:` Add container build & push to GCR in CI pipeline and TF build (CD Release Pipeline) and destroy pipeline.  Considering GitLab or Azure DevOps, pipeline yaml / resources to be added to pipeline folder.  Google Web Security Scanner on public URL and need to action all HIGH and CRITICAL CVE recommendations (cybersecurity vulnerabilities) on container image scan results.*
+*Ruby app runs on 4040, ongoing work required to enable SSL / HTTPs requests which is required to run in containers with HTTPS enabled.  In place of this a HTTP/S NGINX instance has been used.  Ruby code in `/src` folder. `TODO:` Add container build & push to GCR in CI pipeline and TF build (CD Release Pipeline) and destroy pipeline.  Considering GitLab or Azure DevOps, pipeline yaml / resources to be added to `/pipeline` folder.  Google Web Security Scanner on public URL and need to action all HIGH and CRITICAL CVE recommendations (cybersecurity vulnerabilities) on container image scan results.*
 
 ## Terraform Instructions
 
