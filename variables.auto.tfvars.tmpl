@@ -1,0 +1,8 @@
+### Note all variables are set to empty and require populating -      ###
+### - either via System environment variables or pipeline variables.  ### 
+region        = "${REGION}"
+project_id    = "${PROJECT_ID}"
+env           = "${ENV}"
+### Ensure pipeline has secret variable store to transfer to CD pipeline
+#gke_username  = "${SECRET_GKE_USERNAME}"
+#gke_password  = "${SECRET_GKE_PASSWORD}"
